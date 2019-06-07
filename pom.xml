@@ -6,13 +6,13 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.5.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>ru.mvoo.sib.vo</groupId>
 	<artifactId>mvoosibvo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>mvoosibvo</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Interregional Military-hunting society of the Siberian military district of the all-Russian sports public organization.</description>
 
 	<properties>
 		<java.version>1.8</java.version>
