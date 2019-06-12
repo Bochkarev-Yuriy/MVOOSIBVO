@@ -1,8 +1,12 @@
 server:
-  port: 8100
+    port: 8100
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://host:port/****
-    username: ****
-    password: ****
+    datasource:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://host:port/****
+        username: ****
+        password: ****
+    mvc:
+        view:
+            prefix: /templates/
+            suffix: .html
