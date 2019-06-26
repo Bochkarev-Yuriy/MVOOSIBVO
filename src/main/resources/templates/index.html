@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8"/>
 	<title>Welcome</title>
@@ -8,6 +8,13 @@
 <div class="container">
 	<div class="starter-template">
 		<h2>Hello world</h2>
+	</div>
+	<div class="row" th:object="${addressView}">
+		<h1>Address</h1>
+		<p th:text="${addressView.getCountry().name}">Country</p>
+		<p th:text="${addressView.getCity().name}">City</p>
+		<p th:text="${addressView.getPostcode() + ' ' + addressView.getStreet().name + ', ' + addressView.getHouse_number()}">
+			Street</p>
 	</div>
 </div>
 </body>
