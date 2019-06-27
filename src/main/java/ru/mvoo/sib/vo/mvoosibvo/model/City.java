@@ -1,6 +1,9 @@
 package ru.mvoo.sib.vo.mvoosibvo.model;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -10,12 +13,15 @@ public class City {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Getter @Setter
 	@Column(name = "id")
 	private Long id;
 
+	@Getter @Setter
 	@Column(name = "name", length = 20, nullable = false, unique = true)
 	private String name;
 
+	@Getter @Setter
 	@OneToOne(mappedBy = "city")
 	private Address address;
 
@@ -28,22 +34,6 @@ public class City {
 	}
 
 	public City(String name) {
-		this.name = name;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
 		this.name = name;
 	}
 

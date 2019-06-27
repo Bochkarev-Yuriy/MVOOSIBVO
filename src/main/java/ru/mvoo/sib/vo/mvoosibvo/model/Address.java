@@ -1,5 +1,8 @@
 package ru.mvoo.sib.vo.mvoosibvo.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -11,28 +14,30 @@ public class Address implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Getter @Setter
 	@Column(name = "id")
 	private Long id;
 
-
+	@Getter @Setter
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "address_country")
 	private Country country;
 
-
+	@Getter @Setter
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "address_city")
 	private City city;
 
-
+	@Getter @Setter
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "address_street")
 	private Street street;
 
-
+	@Getter @Setter
 	@Column(name = "house_number")
 	private Long house_number;
 
+	@Getter @Setter
 	@Column(name = "postcode")
 	private Long postcode;
 
@@ -44,54 +49,6 @@ public class Address implements Serializable {
 		this.city = city;
 		this.street = street;
 		this.house_number = house_number;
-		this.postcode = postcode;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Country getCountry() {
-		return country;
-	}
-
-	public void setCountry(Country country) {
-		this.country = country;
-	}
-
-	public City getCity() {
-		return city;
-	}
-
-	public void setCity(City city) {
-		this.city = city;
-	}
-
-	public Street getStreet() {
-		return street;
-	}
-
-	public void setStreet(Street street) {
-		this.street = street;
-	}
-
-	public Long getHouse_number() {
-		return house_number;
-	}
-
-	public void setHouse_number(Long house_number) {
-		this.house_number = house_number;
-	}
-
-	public Long getPostcode() {
-		return postcode;
-	}
-
-	public void setPostcode(Long postcode) {
 		this.postcode = postcode;
 	}
 
