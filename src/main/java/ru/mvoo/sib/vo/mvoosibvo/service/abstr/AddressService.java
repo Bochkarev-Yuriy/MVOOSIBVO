@@ -1,8 +1,8 @@
 package ru.mvoo.sib.vo.mvoosibvo.service.abstr;
 
-import ru.mvoo.sib.vo.mvoosibvo.model.Address;
+import ru.mvoo.sib.vo.mvoosibvo.dto.AddressDTO;
 
 public interface AddressService {
 
-	Address getAddressById(Long id);
+	AddressDTO getAddressById(Long id);
 }

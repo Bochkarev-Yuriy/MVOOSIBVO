@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8"/>
-	<title>Welcome</title>
+	<title>Index</title>
 </head>
 <body>
 <div class="container">
@@ -11,9 +11,9 @@
 	</div>
 	<div class="row" th:object="${addressView}">
 		<h1>Address</h1>
-		<p th:text="${addressView.getCountry().name}">Country</p>
-		<p th:text="${addressView.getCity().name}">City</p>
-		<p th:text="${addressView.getPostcode() + ' ' + addressView.getStreet().name + ', ' + addressView.getHouse_number()}">
+		<p th:text="${addressView.getCountryDTO().name}">Country</p>
+		<p th:text="${addressView.getCityDTO().name}">City</p>
+		<p th:text="${addressView.getPostcode() + ' ' + addressView.getStreetDTO().name + ', ' + addressView.getHouse_number()}">
 			Street</p>
 	</div>
 </div>

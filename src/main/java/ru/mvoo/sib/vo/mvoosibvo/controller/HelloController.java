@@ -10,10 +10,10 @@ import ru.mvoo.sib.vo.mvoosibvo.service.abstr.AddressService;
 @Controller
 public class HelloController {
 
-	private final AddressService addressService;
+	private AddressService addressService;
 
 	@Autowired
-	public HelloController(AddressService addressService) {
+	public void setAddressService(AddressService addressService) {
 		this.addressService = addressService;
 	}
 
