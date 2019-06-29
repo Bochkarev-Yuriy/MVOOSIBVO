@@ -39,7 +39,7 @@ public class AddressConverterServiceImpl implements AddressConverterService {
 		AddressDTO addressDTO = new AddressDTO();
 		addressDTO.setCountryDTO(countryConverterService.getCountryByEntity(address.getCountry()));
 		addressDTO.setCityDTO(cityConverterService.getCityByEntity(address.getCity()));
-		addressDTO.setStreetDTO(streetConverterService.getCityByEntity(address.getStreet()));
+		addressDTO.setStreetDTO(streetConverterService.getStreetByEntity(address.getStreet()));
 		addressDTO.setHouse_number(address.getHouse_number());
 		addressDTO.setPostcode(address.getPostcode());
 		return addressDTO;
