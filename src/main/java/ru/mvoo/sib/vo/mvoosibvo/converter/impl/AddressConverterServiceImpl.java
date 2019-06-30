@@ -14,9 +14,7 @@ import ru.mvoo.sib.vo.mvoosibvo.model.Address;
 public class AddressConverterServiceImpl implements AddressConverterService {
 
 	private CountryConverterService countryConverterService;
-
 	private CityConverterService cityConverterService;
-
 	private StreetConverterService streetConverterService;
 
 	@Autowired

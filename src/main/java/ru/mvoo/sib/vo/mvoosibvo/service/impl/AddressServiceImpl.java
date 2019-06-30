@@ -29,7 +29,7 @@ public class AddressServiceImpl implements AddressService {
 	 * @return an instance of an object {@link AddressDTO}
 	 */
 	@Override
-	public AddressDTO getAddressById(Long id) {
+	public AddressDTO getAddressDtoByAddressId(Long id) {
 		return addressConverterService.getAddressByEntity(addressDao.getAddressById(id));
 	}
 }

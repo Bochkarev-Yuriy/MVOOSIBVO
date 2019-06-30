@@ -20,7 +20,7 @@ public class HelloController {
 	@RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
 	public ModelAndView index() {
 		ModelAndView modelAndView = new ModelAndView("index");
-		modelAndView.addObject("addressView", addressService.getAddressById(1L));
+		modelAndView.addObject("addressView", addressService.getAddressDtoByAddressId(1L));
 		return modelAndView;
 	}
 }

@@ -4,5 +4,5 @@ import ru.mvoo.sib.vo.mvoosibvo.dto.AddressDTO;
 
 public interface AddressService {
 
-	AddressDTO getAddressById(Long id);
+	AddressDTO getAddressDtoByAddressId(Long id);
 }
