@@ -3,6 +3,7 @@ package ru.mvoo.sib.vo.mvoosibvo.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 
@@ -10,8 +11,9 @@ import java.util.Objects;
 @Data
 @NoArgsConstructor
 @Table(name = "country", schema = "public")
-public class Country {
+public class Country implements Serializable {
 
+	private static final long serialVersionUID = -993833530758465781L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@NonNull

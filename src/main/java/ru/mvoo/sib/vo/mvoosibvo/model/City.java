@@ -4,14 +4,16 @@ package ru.mvoo.sib.vo.mvoosibvo.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Data
 @NoArgsConstructor
 @Table(name = "city", schema = "public")
-public class City {
+public class City implements Serializable {
 
+	private static final long serialVersionUID = -3820014430594967199L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@NonNull

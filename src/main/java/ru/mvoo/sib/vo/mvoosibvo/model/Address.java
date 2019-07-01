@@ -12,6 +12,7 @@ import java.io.Serializable;
 @Table(name = "addresses", schema = "public")
 public class Address implements Serializable {
 
+	private static final long serialVersionUID = 7368578536869113972L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
