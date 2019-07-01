@@ -5,5 +5,5 @@ import ru.mvoo.sib.vo.mvoosibvo.model.Street;
 
 public interface StreetConverterService {
 
-	StreetDTO getStreetByEntity(Street street);
+	StreetDTO getStreetDtoByEntity(Street street);
 }

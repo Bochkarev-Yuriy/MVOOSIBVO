@@ -9,7 +9,7 @@ import ru.mvoo.sib.vo.mvoosibvo.model.Street;
 public class StreetConverterServiceImpl implements StreetConverterService {
 
 	@Override
-	public StreetDTO getStreetByEntity(Street street) {
+	public StreetDTO getStreetDtoByEntity(Street street) {
 		StreetDTO streetDTO = new StreetDTO();
 		streetDTO.setId(street.getId());
 		streetDTO.setName(street.getName());

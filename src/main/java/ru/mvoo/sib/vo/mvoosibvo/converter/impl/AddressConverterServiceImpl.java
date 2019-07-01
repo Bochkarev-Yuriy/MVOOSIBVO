@@ -33,11 +33,11 @@ public class AddressConverterServiceImpl implements AddressConverterService {
 	}
 
 	@Override
-	public AddressDTO getAddressByEntity(Address address) {
+	public AddressDTO getAddressDtoByEntity(Address address) {
 		AddressDTO addressDTO = new AddressDTO();
-		addressDTO.setCountryDTO(countryConverterService.getCountryByEntity(address.getCountry()));
-		addressDTO.setCityDTO(cityConverterService.getCityByEntity(address.getCity()));
-		addressDTO.setStreetDTO(streetConverterService.getStreetByEntity(address.getStreet()));
+		addressDTO.setCountryDTO(countryConverterService.getCountryDtoByEntity(address.getCountry()));
+		addressDTO.setCityDTO(cityConverterService.getCityDtoByEntity(address.getCity()));
+		addressDTO.setStreetDTO(streetConverterService.getStreetDtoByEntity(address.getStreet()));
 		addressDTO.setHouse_number(address.getHouse_number());
 		addressDTO.setPostcode(address.getPostcode());
 		return addressDTO;

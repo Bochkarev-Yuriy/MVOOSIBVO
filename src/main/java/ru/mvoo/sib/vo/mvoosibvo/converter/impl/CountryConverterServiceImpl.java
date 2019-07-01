@@ -9,7 +9,7 @@ import ru.mvoo.sib.vo.mvoosibvo.model.Country;
 public class CountryConverterServiceImpl implements CountryConverterService {
 
 	@Override
-	public CountryDTO getCountryByEntity(Country country) {
+	public CountryDTO getCountryDtoByEntity(Country country) {
 		CountryDTO countryDTO = new CountryDTO();
 		countryDTO.setId(country.getId());
 		countryDTO.setName(country.getName());

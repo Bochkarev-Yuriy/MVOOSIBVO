@@ -5,5 +5,5 @@ import ru.mvoo.sib.vo.mvoosibvo.model.City;
 
 public interface CityConverterService {
 
-	CityDTO getCityByEntity(City city);
+	CityDTO getCityDtoByEntity(City city);
 }

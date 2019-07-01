@@ -30,6 +30,6 @@ public class AddressServiceImpl implements AddressService {
 	 */
 	@Override
 	public AddressDTO getAddressDtoByAddressId(Long id) {
-		return addressConverterService.getAddressByEntity(addressDao.getAddressById(id));
+		return addressConverterService.getAddressDtoByEntity(addressDao.getAddressById(id));
 	}
 }

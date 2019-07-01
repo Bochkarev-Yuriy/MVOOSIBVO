@@ -9,7 +9,7 @@ import ru.mvoo.sib.vo.mvoosibvo.model.City;
 public class CityConverterServiceImpl implements CityConverterService {
 
 	@Override
-	public CityDTO getCityByEntity(City city) {
+	public CityDTO getCityDtoByEntity(City city) {
 		CityDTO cityDTO = new CityDTO();
 		cityDTO.setId(city.getId());
 		cityDTO.setName(city.getName());

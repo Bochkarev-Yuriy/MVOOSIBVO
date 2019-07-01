@@ -5,5 +5,5 @@ import ru.mvoo.sib.vo.mvoosibvo.model.Address;
 
 public interface AddressConverterService {
 
-	AddressDTO getAddressByEntity(Address address);
+	AddressDTO getAddressDtoByEntity(Address address);
 }
