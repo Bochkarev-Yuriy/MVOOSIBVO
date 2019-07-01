@@ -67,8 +67,11 @@
                             <div class="info-item">
                                 <i class="fa fa-clock-o"></i> Mon - Sat : 08:00 - 17:00
                             </div>
-                            <div class="info-item">
-                                <i class="fa fa-map-marker"></i> 99 Park Jomblo, Pekanbaru
+                            <div class="info-item" th:object="${addressView}">
+                                <i class="fa fa-map-marker"></i>
+                                <i th:text="${' ' + addressView.getCountryDTO().name + '  ' + addressView.getPostcode()+
+							 ', ' + addressView.getCityDTO().name + ', ' +  addressView.getStreetDTO().name + ', ' +
+							 addressView.getHouse_number()}"></i>
                             </div>
                         </div>
                     </div>
@@ -730,9 +733,14 @@
                                 Contact Info
                             </div>
 
-                            <div class="row mb-3">
+                            <div class="row mb-3" th:object="${addressView}">
                                 <div class="col-5">Address :</div>
-                                <div class="col-7">99 Park Jomblo Street, Panam, Pekanbaru 28292, Riau</div>
+                                <div class="col-7">
+                                    <p th:text="${addressView.getCountryDTO().name}">Country</p>
+                                    <p th:text="${addressView.getCityDTO().name}">City</p>
+                                    <p th:text="${addressView.getPostcode() + ' ' + addressView.getStreetDTO().name + ', ' + addressView.getHouse_number()}">
+                                        Street</p>
+                                </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-5">Office :</div>
